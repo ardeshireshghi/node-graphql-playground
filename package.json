@@ -1,15 +1,15 @@
 {
-  "name": "graphql-server",
+  "name": "node-graphql-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js, express and graphql server just for exploration",
   "main": "index.js",
   "scripts": {
     "start": "npx nodemon server.js",
     "lint": "npx eslint --fix src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["graphql", "node", "express"],
+  "author": "Ardeshir Eshghi",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
