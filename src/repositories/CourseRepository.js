@@ -23,16 +23,17 @@ class CourseRepository {
   }
 
   updateTopic({ id, topic }) {
-    const courseWithId = this.findWhere({ id });
+    const courseWithId = this.getById({ id });
 
-    if (courseWithId.length) {
+    if (courseWithId) {
       const courseWithNewTopic = new Course({
-        ...courseWithId[0],
+        ...courseWithId,
         topic
       });
 
       this._collection = this._collection
         .map(course => (course.id === id ? courseWithNewTopic : course));
+
       return courseWithNewTopic;
     }
 
